@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 # Load model
-model = joblib.load("artifacts/model.pkl")
+model = joblib.load("models/artifacts/model.pkl")
 
 # Page Config
 st.set_page_config(
