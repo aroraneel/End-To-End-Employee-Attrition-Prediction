@@ -1,30 +1,28 @@
-import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-import joblib
 import os
 
-# Create artifacts folder
-os.makedirs("artifacts", exist_ok=True)
+import joblib
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
 
-# Load dataset
-df = pd.read_csv(r"C:\Users\Neel Arora\OneDrive\Desktop\End to End Employee Attrition Prediction\data\raw\Dataset01-Employee_Attrition.csv")
+from src.config.config import DATA_PATH, MODEL_PATH
+from src.utils.logger import logging
 
-# Convert categorical columns
-df = pd.get_dummies(df, drop_first=True)
 
-# Check columns
-print(df.columns)
+def train_model():
+    os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
 
-# Features and target
-X = df.drop("left", axis=1)
-y = df["left"]
+    df = pd.read_csv(DATA_PATH)
+    df = pd.get_dummies(df, drop_first=True)
 
-# Train model
-model = RandomForestClassifier()
+    X = df.drop("left", axis=1)
+    y = df["left"]
 
-model.fit(X, y)
+    model = RandomForestClassifier()
+    model.fit(X, y)
 
-# Save model
-joblib.dump(model, "artifacts/model.pkl")
+    joblib.dump(model, MODEL_PATH)
+    logging.info("Model trained and saved at %s", MODEL_PATH)
 
-print("✅ Model trained and saved!")
+
+if __name__ == "__main__":
+    train_model()

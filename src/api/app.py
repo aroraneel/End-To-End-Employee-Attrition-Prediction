@@ -1,10 +1,10 @@
-
 import streamlit as st
 import pandas as pd
-import joblib
+
+from src.models.predict import load_model
 
 # Load model
-model = joblib.load("models/artifacts/model.pkl")
+model = load_model()
 
 # Page Config
 st.set_page_config(
@@ -298,4 +298,3 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
