@@ -38,23 +38,22 @@ The project covers:
 ```bash
 End-To-End-Employee-Attrition-Prediction/
 │
-├── artifacts/               
-├── notebook/                
-├── src/                     
-│   ├── components/
-│   ├── pipeline/
-│   ├── exception.py
-│   ├── logger.py
-│   └── utils.py
-│
-├── static/                  
-├── templates/               
-│
-├── app.py                   
-├── requirements.txt         
-├── setup.py                 
-├── README.md                
-└── .gitignore
+├── Dockerfile
+├── requirements.txt
+├── setup.py
+├── README.md
+├── data/
+├── logs/
+├── models/
+├── notebooks/
+└── src/
+    ├── __init__.py
+    ├── predict.py
+    ├── api/
+    ├── config/
+    ├── models/
+    ├── pipelines/
+    └── utils/
 ```
 
 ---
