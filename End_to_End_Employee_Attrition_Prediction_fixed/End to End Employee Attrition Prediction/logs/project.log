@@ -1,0 +1,6 @@
+2026-05-09 13:01:15,746 - INFO - Data split — train: 11999 rows, test: 3000 rows
+2026-05-09 13:01:17,349 - INFO - Model training complete
+2026-05-09 13:01:17,496 - INFO - Accuracy : 0.9900
+2026-05-09 13:01:17,498 - INFO - F1 Score : 0.9787
+2026-05-09 13:01:17,498 - INFO - ROC-AUC  : 0.9895
+2026-05-09 13:01:17,604 - INFO - Model saved at models/model.pkl
