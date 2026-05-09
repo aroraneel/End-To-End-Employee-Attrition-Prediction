@@ -1,22 +1,23 @@
 # Employee Attrition Prediction System
 
-An end-to-end Machine Learning project that predicts whether an employee is likely to leave the company or not based on HR analytics data. This project includes data preprocessing, model training, pipeline creation, and deployment using Flask.
+An end-to-end Machine Learning project that predicts whether an employee is likely to leave the company based on HR analytics data. This project covers the complete ML workflow including data preprocessing, model training, prediction pipelines, and deployment using Flask.
 
 ---
 
 ## 🚀 Project Overview
 
-Employee attrition is one of the major challenges faced by organizations. This project uses Machine Learning algorithms to analyze employee data and predict attrition probability.
+Employee attrition is one of the biggest challenges faced by organizations. This project uses Machine Learning techniques to analyze employee-related factors and predict attrition probability.
 
-The project covers:
+The project includes:
 
-- Data Ingestion
-- Data Cleaning & Preprocessing
+- Data Collection
+- Data Preprocessing
 - Exploratory Data Analysis (EDA)
 - Feature Engineering
 - Model Training
-- Model Evaluation
-- Flask Web Application Deployment
+- Prediction Pipeline
+- Flask API Deployment
+- Docker Support
 
 ---
 
@@ -28,7 +29,7 @@ The project covers:
 - Scikit-Learn
 - Flask
 - CatBoost
-- HTML & CSS
+- Docker
 - Git & GitHub
 
 ---
@@ -38,41 +39,44 @@ The project covers:
 ```bash
 End-To-End-Employee-Attrition-Prediction/
 │
-├── Dockerfile
-├── requirements.txt
-├── setup.py
-├── README.md
 ├── data/
+│   └── raw/
+│
 ├── logs/
 ├── models/
 ├── notebooks/
-└── src/
-    ├── __init__.py
-    ├── predict.py
-    ├── api/
-    ├── config/
-    ├── models/
-    ├── pipelines/
-    └── utils/
+├── src/
+│   ├── api/
+│   ├── config/
+│   ├── models/
+│   ├── pipelines/
+│   ├── utils/
+│   ├── predict.py
+│   └── __init__.py
+│
+├── Dockerfile
+├── README.md
+├── requirements.txt
+└── setup.py
 ```
 
 ---
 
 ## 📊 Features Used
 
-The model uses employee-related information such as:
+The model uses multiple employee-related features such as:
 
 - Age
 - Department
-- Monthly Income
 - Job Role
+- Monthly Income
 - Work-Life Balance
 - Years at Company
 - Overtime
-- Environment Satisfaction
 - Job Satisfaction
-- Training Times Last Year
+- Environment Satisfaction
 - Performance Rating
+- Training Times Last Year
 
 ---
 
@@ -84,7 +88,7 @@ Clone the repository:
 git clone https://github.com/aroraneel/End-To-End-Employee-Attrition-Prediction.git
 ```
 
-Move to project directory:
+Move to the project directory:
 
 ```bash
 cd End-To-End-Employee-Attrition-Prediction
@@ -118,15 +122,15 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Run The Application
+## ▶️ Run The Project
 
-Start Flask server:
+Run the Flask application:
 
 ```bash
-python app.py
+python src/api/app.py
 ```
 
-Open browser:
+Application will run on:
 
 ```bash
 http://127.0.0.1:5000
@@ -134,45 +138,65 @@ http://127.0.0.1:5000
 
 ---
 
+## 🐳 Docker Setup
+
+Build Docker image:
+
+```bash
+docker build -t employee-attrition .
+```
+
+Run Docker container:
+
+```bash
+docker run -p 5000:5000 employee-attrition
+```
+
+---
+
 ## 📈 Machine Learning Workflow
 
 1. Data Collection  
-2. Data Preprocessing  
-3. Feature Engineering  
-4. Train-Test Split  
+2. Data Cleaning  
+3. Exploratory Data Analysis  
+4. Feature Engineering  
 5. Model Training  
 6. Model Evaluation  
-7. Pipeline Creation  
+7. Prediction Pipeline  
 8. Flask Deployment  
 
 ---
 
 ## 🎯 Project Goal
 
-The main objective of this project is to help organizations:
+The objective of this project is to:
 
 - Reduce employee attrition
-- Improve workforce management
-- Identify high-risk employees
-- Support HR decision-making using Machine Learning
+- Help HR teams make better decisions
+- Identify employees at high risk of leaving
+- Improve workforce management using Machine Learning
 
 ---
 
-## 📸 Application Preview
+## 📸 Project Preview
 
-Add screenshots of your application here.
+You can add screenshots of:
 
-Example:
+- Flask Web Interface
+- Prediction Results
+- EDA Visualizations
+
+Example path:
 
 ```bash
-static/images/home.png
+notebooks/images/project_preview.png
 ```
 
 ---
 
 ## 📦 Requirements
 
-Main libraries used in this project:
+Main libraries used:
 
 ```txt
 pandas
@@ -190,22 +214,22 @@ seaborn
 
 Contributions are welcome.
 
-If you'd like to improve this project:
+Steps to contribute:
 
 1. Fork the repository  
 2. Create a new branch  
 3. Commit your changes  
-4. Push to the branch  
+4. Push to GitHub  
 5. Open a Pull Request  
 
 ---
 
-## 👨‍💻 Developed By
+## 👨‍💻 Author
 
 ### Neel Arora
 
-Passionate about Machine Learning, Data Science, and Full Stack Development.
+AI/ML Enthusiast passionate about building intelligent predictive systems using Machine Learning, Data Analytics, and modern technologies.
 
-This project demonstrates an end-to-end implementation of a Machine Learning pipeline with deployment integration using Flask.
+Focused on developing real-world AI solutions with scalable and production-ready workflows.
 
-⭐ If you found this project useful, feel free to star the repository and connect for more ML projects.
+⭐ If you found this project useful, feel free to star the repository.
